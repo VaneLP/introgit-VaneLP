@@ -2,10 +2,7 @@ package Practica_1;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class Practica1 extends JFrame{
     //Atributos
@@ -16,6 +13,8 @@ public class Practica1 extends JFrame{
     private JButton centro1;
     private JButton centro2;
     private JButton centro3;
+    private JButton limpiar;
+    private JLabel panelTxt;
 
     //constructor
     public Practica1(){
@@ -66,6 +65,41 @@ public class Practica1 extends JFrame{
                 JOptionPane.showMessageDialog(null, "Has pulsado Opcion 3", null,JOptionPane.ERROR_MESSAGE);
             }
         });
+
+        //centro 1
+        centro1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                String numero = String.valueOf(e.getKeyChar());
+
+                if("1".equals(numero))
+                    panelTxt.setText("1");
+            }
+        });
+
+        //centro 2
+        centro2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                String numero = String.valueOf(e.getKeyChar());
+
+                if("2".equals(numero))
+                    panelTxt.setText("2");
+            }
+        });
+
+        //centro 3
+        centro3.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                String numero = String.valueOf(e.getKeyChar());
+
+                if("3".equals(numero))
+                    panelTxt.setText("3");
+            }
+        });
+
+
     }
 
 
