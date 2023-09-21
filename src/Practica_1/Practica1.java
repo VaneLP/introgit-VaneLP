@@ -36,6 +36,9 @@ public class Practica1 extends JFrame{
         //hacemos visible el panel
         setVisible(true);
 
+        //para que se fije en el panel y podamos teclear cada vez
+        panelTxt.requestFocus();
+
         // ---- LISTENERS ----
         //Norte 1
         norte1.addActionListener(new ActionListener() {
@@ -44,6 +47,8 @@ public class Practica1 extends JFrame{
                 //mensaje de dialogo
                 JOptionPane.showMessageDialog(null, "Has pulsado el norte", null,JOptionPane.WARNING_MESSAGE);
 
+                //para que se fije en el panel y podamos teclear cada vez
+                panelTxt.requestFocus();
             }
         });
 
@@ -54,6 +59,9 @@ public class Practica1 extends JFrame{
                 super.mouseEntered(e);
                 //Cuando pasa por encima el raton cambiar el texto a central
                 norte2.setText("Central");
+
+                //para que se fije en el panel y podamos teclear cada vez
+                panelTxt.requestFocus();
             }
         });
 
@@ -63,41 +71,74 @@ public class Practica1 extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 //mensaje de error
                 JOptionPane.showMessageDialog(null, "Has pulsado Opcion 3", null,JOptionPane.ERROR_MESSAGE);
+
+                //para que se fije en el panel y podamos teclear cada vez
+                panelTxt.requestFocus();
             }
         });
 
-        //centro 1
-        centro1.addKeyListener(new KeyAdapter() {
+        //presionar teclas
+        panelTxt.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
                 String numero = String.valueOf(e.getKeyChar());
 
                 if("1".equals(numero))
-                    panelTxt.setText("1");
-            }
-        });
-
-        //centro 2
-        centro2.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-                String numero = String.valueOf(e.getKeyChar());
+                    panelTxt.setText("tecleado 1");
 
                 if("2".equals(numero))
-                    panelTxt.setText("2");
-            }
-        });
-
-        //centro 3
-        centro3.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-                String numero = String.valueOf(e.getKeyChar());
+                    panelTxt.setText("tecleado 2");
 
                 if("3".equals(numero))
-                    panelTxt.setText("3");
+                    panelTxt.setText("tecleado 3");
+
             }
         });
+
+        //centro1 cuando pulsamos cambie el jlabel
+        centro1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panelTxt.setText(" pulsado 1");
+
+                //para que se fije en el panel y podamos teclear cada vez
+                panelTxt.requestFocus();
+            }
+        });
+
+        //centro2 cuando pulsamos cambie el jlabel
+        centro2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panelTxt.setText("pulsado 2");
+
+                //para que se fije en el panel y podamos teclear cada vez
+                panelTxt.requestFocus();
+            }
+        });
+
+        //centro3 cuando pulsamos cambie el jlabel
+        centro3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panelTxt.setText("pulsado 3");
+
+                //para que se fije en el panel y podamos teclear cada vez
+                panelTxt.requestFocus();
+            }
+        });
+
+        //boton limpiar jlabel
+        limpiar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panelTxt.setText("Pulsa los centrales o teclea");
+
+                //para que se fije en el panel y podamos teclear cada vez
+                panelTxt.requestFocus();
+            }
+        });
+
 
 
     }
