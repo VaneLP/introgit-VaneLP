@@ -92,6 +92,8 @@ public class Practica1 extends JFrame{
                 if("3".equals(numero))
                     panelTxt.setText("tecleado 3");
 
+                if("c".equals(numero))
+                    panelTxt.setText("");
             }
         });
 
@@ -132,15 +134,57 @@ public class Practica1 extends JFrame{
         limpiar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                panelTxt.setText("Pulsa los centrales o teclea");
+                panelTxt.setText("");
 
                 //para que se fije en el panel y podamos teclear cada vez
                 panelTxt.requestFocus();
             }
         });
 
+        //centro1 uno para que cuando entremos y salimos cambie de color
+        centro1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                centro1.setBackground(new Color(145, 222, 131));
+            }
 
+            @Override
+            public void mouseExited(MouseEvent e) {
+                super.mouseExited(e);
+                centro1.setBackground(Color.white);
+            }
+        });
 
+        //centro2 uno para que cuando entremos y salimos cambie de color
+        centro2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                centro2.setBackground(new Color(145, 222, 131));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                super.mouseExited(e);
+                centro2.setBackground(Color.white);
+            }
+        });
+
+        //centro3 uno para que cuando entremos y salimos cambie de color
+        centro3.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                centro3.setBackground(new Color(145, 222, 131));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                super.mouseExited(e);
+                centro3.setBackground(Color.white);
+            }
+        });
     }
 
 
