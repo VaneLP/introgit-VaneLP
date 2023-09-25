@@ -2,14 +2,30 @@ package Practica_1;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
+/*
+PROFE NI CASO COSAS MIAS, ES PARA NO PERDERLO
+ Paleta de colores:
+ - 336699 (azul oscuro)
+ - 86BBD8 (azul claro)
+ - 2F4858 (gris azulado)
+ - 9EE493 (verde)
+ - DAF7DC (amarillo verdoso)
+ - F03A47 (rojo 1)
 
+ 2B2D30
+ */
 public class Login extends JFrame {
     //atributos
     private JPanel panelPrincipal;
-    private JButton loginButton;
+    private JButton login;
     private JCheckBox recuerdameCheckBox;
-    private JPasswordField passwordField1;
-    private JTextField textField1;
+    private JPasswordField contra;
+    private JTextField nombreU;
+    String user = "Vane";
+    char [] pass = new char[]{'1','2','3','4'};
     private JLabel iconoU;
     private JLabel iconoC;
 
@@ -37,18 +53,20 @@ public class Login extends JFrame {
         iconoC.setIcon(new ImageIcon("src/Practica_1/imagenes/candado.png"));
         iconoU.setIcon(new ImageIcon("src/Practica_1/imagenes/usuario.png"));
 
-        /**
-         Paleta de colores:
-         - 336699 (azul oscuro)
-         - 86BBD8 (azul claro)
-         - 2F4858 (gris azulado)
-         - 9EE493 (verde)
-         - DAF7DC (amarillo verdoso)
-         - AF5B5B (rojo 1)
-         - F03A47 (rojo 2)
+        //listeners
+        //boton login
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //user: Vane
+                //pass: 1234
+                if(nombreU.getText().equals(user) && Arrays.equals(contra.getPassword(), pass))
+                    login.setBackground(new Color(158,228,147));
+                else
+                    login.setBackground(new Color(240,58,71));
+            }
+        });
 
-         2B2D30
-         */
 
 
     }
