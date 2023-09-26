@@ -60,8 +60,11 @@ public class Login extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 //user: Vane
                 //pass: 1234
-                if(nombreU.getText().equals(user) && Arrays.equals(contra.getPassword(), pass))
-                    login.setBackground(new Color(158,228,147));
+                if(nombreU.getText().equals(user) && Arrays.equals(contra.getPassword(), pass)) {
+                    login.setBackground(new Color(158, 228, 147));
+                    abrirEditor();
+                    dispose();
+                }
                 else
                     login.setBackground(new Color(240,58,71));
             }
@@ -69,6 +72,11 @@ public class Login extends JFrame {
 
 
 
+    }
+
+    //metodo abrir el editor
+    public void abrirEditor(){
+        Ventana v1 = new Ventana();
     }
 
 

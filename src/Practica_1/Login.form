@@ -57,7 +57,7 @@
             <properties>
               <background color="-2426916"/>
               <margin top="2" left="6" bottom="2" right="6"/>
-              <text value=""/>
+              <text value="Vane"/>
             </properties>
           </component>
           <hspacer id="3adff">
@@ -103,7 +103,7 @@
             </constraints>
             <properties>
               <background color="-2426916"/>
-              <text value=""/>
+              <text value="1234"/>
             </properties>
           </component>
           <hspacer id="6609e">
