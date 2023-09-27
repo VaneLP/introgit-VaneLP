@@ -14,8 +14,8 @@ public class Ventana extends JDialog{
     private JRadioButton radioButton1;
     private JRadioButton radioButton2;
     private JRadioButton radioButton3;
-    private JComboBox comboBox1;
-    private JPanel label1;
+    private JComboBox<String> comboBox1;
+    private JLabel label1;
     private JMenuItem o1,o2,o3;
 
     //constructor
@@ -30,10 +30,6 @@ public class Ventana extends JDialog{
         setSize(500,500);
         setLocationRelativeTo(null);
 
-
-
-
-        //PRUEBAS
         //asignamos el JMenuBAr
         setJMenuBar(menuBar);
 
@@ -100,7 +96,7 @@ public class Ventana extends JDialog{
         radioButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                label1.setText("Hola");
             }
         });
 
@@ -108,7 +104,7 @@ public class Ventana extends JDialog{
         radioButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                label1.setText("Esto");
             }
         });
 
@@ -116,9 +112,15 @@ public class Ventana extends JDialog{
         radioButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                label1.setText("Cambia");
             }
         });
+
+        //añadimos items al combobox
+        comboBox1.addItem("Hola");
+        comboBox1.addItem("Esto");
+        comboBox1.addItem("Cambia");
+
     }
 
 }
