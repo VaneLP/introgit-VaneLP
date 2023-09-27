@@ -16,7 +16,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="3e5e4" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+      <component id="3e5e4" class="javax.swing.JTextArea" binding="text">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
@@ -24,6 +24,7 @@
         </constraints>
         <properties>
           <background color="-2426916"/>
+          <text value="Notas"/>
         </properties>
       </component>
       <grid id="e832f" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -46,34 +47,34 @@
             </properties>
             <border type="bevel-raised"/>
             <children>
-              <component id="826f1" class="javax.swing.JRadioButton" binding="radioButton1" default-binding="true">
+              <component id="826f1" class="javax.swing.JRadioButton" binding="radioButton1">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-7947304"/>
-                  <text value="RadioButton"/>
+                  <text value="Hola"/>
                 </properties>
               </component>
-              <component id="c2ef6" class="javax.swing.JRadioButton" binding="radioButton2" default-binding="true">
+              <component id="c2ef6" class="javax.swing.JRadioButton" binding="radioButton2">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-7947304"/>
-                  <text value="RadioButton"/>
+                  <text value="Esto"/>
                 </properties>
               </component>
-              <component id="ed4d4" class="javax.swing.JRadioButton" binding="radioButton3" default-binding="true">
+              <component id="ed4d4" class="javax.swing.JRadioButton" binding="radioButton3">
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-7947304"/>
-                  <text value="RadioButton"/>
+                  <text value="Cambiaria"/>
                 </properties>
               </component>
-              <grid id="2b188" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="2b188" binding="label1" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>

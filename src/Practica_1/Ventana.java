@@ -1,23 +1,21 @@
 package Practica_1;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
-public class Ventana extends JDialog  implements ActionListener{
+public class Ventana extends JDialog{
     private JPanel panelPrincipal;
     private JMenu menu;
     private JMenuBar menuBar;
-    private JTextArea textArea1;
+    private JTextArea text;
     private JCheckBox borrarCheckBox;
     private JCheckBox salirCheckBox;
     private JRadioButton radioButton1;
     private JRadioButton radioButton2;
     private JRadioButton radioButton3;
     private JComboBox comboBox1;
+    private JPanel label1;
     private JMenuItem o1,o2,o3;
 
     //constructor
@@ -36,32 +34,56 @@ public class Ventana extends JDialog  implements ActionListener{
 
 
         //PRUEBAS
-
+        //asignamos el JMenuBAr
         setJMenuBar(menuBar);
 
+        //creamos un nuevo menu y le ponemos un titulo
         menu = new JMenu("Opciones");
+        //a nuestro JMenuBar le asignamos nuestro menu
         menuBar.add(menu);
 
+        //creamos los items y le pomenos un nombre
         o1 = new JMenuItem("Borrar");
         o2 = new JMenuItem("Salir");
         o3 = new JMenuItem("Volver");
 
+        //añadimos a nuestro menu los items que acabamos de crear
         menu.add(o1);
         menu.add(o2);
         menu.add(o3);
 
-        o1.addActionListener(this);
-        o2.addActionListener(this);
-        o3.addActionListener(this);
-
-
-
         // ---- LISTENERS ----
+        //Item menu bar - borrar
+        o1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                text.setText("");
+            }
+        });
+
+        //Item menu bar - salir
+        o2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
+        //Item menu bar - volver
+        o3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+
+        //-----------------------------------------------------------------------
+
         //check box borrar
         borrarCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textArea1.setText("");
+                text.setText("");
             }
         });
         //check box salir
@@ -72,33 +94,32 @@ public class Ventana extends JDialog  implements ActionListener{
             }
         });
 
+        //-----------------------------------------------------------------------
 
+        //radio button 1
+        radioButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
+            }
+        });
 
+        //radio button 2
+        radioButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
+            }
+        });
 
+        //radio button 3
+        radioButton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-
+            }
+        });
     }
-
-    //botones funcionales
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        Container c = this.getContentPane();
-
-        //borrar
-        if(e.getSource() == o1)
-           textArea1.setText("");
-
-        //salir
-        if(e.getSource() == o2)
-            dispose();
-
-        //volver
-        if(e.getSource() == o3)
-            dispose();
-    }
-
 
 }
 
