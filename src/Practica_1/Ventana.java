@@ -48,6 +48,11 @@ public class Ventana extends JDialog{
         menu.add(o2);
         menu.add(o3);
 
+        //añadimos items al combobox
+        comboBox1.addItem("Hola");
+        comboBox1.addItem("Esto");
+        comboBox1.addItem("Cambia");
+
         // ---- LISTENERS ----
         //Item menu bar - borrar
         o1.addActionListener(new ActionListener() {
@@ -116,10 +121,21 @@ public class Ventana extends JDialog{
             }
         });
 
-        //añadimos items al combobox
-        comboBox1.addItem("Hola");
-        comboBox1.addItem("Esto");
-        comboBox1.addItem("Cambia");
+        //-----------------------------------------------------------------------
+
+        //combobox
+        comboBox1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(comboBox1.getSelectedIndex() == 0)
+                    label1.setText("holi");
+                if(comboBox1.getSelectedIndex() == 1)
+                    label1.setText("que");
+                if(comboBox1.getSelectedIndex() == 2)
+                    label1.setText("tal");
+            }
+        });
+
 
     }
 
