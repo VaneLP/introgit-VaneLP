@@ -29,7 +29,8 @@ public class Login extends JFrame {
     private JLabel iconoU;
     private JLabel iconoC;
 
-    //constructor
+
+    // ---- CONSTRUCTOR ----
     public Login() {
         //para que se muestre en la ventana nuestro panel
         setContentPane(panelPrincipal);
@@ -53,7 +54,14 @@ public class Login extends JFrame {
         iconoC.setIcon(new ImageIcon("src/Practica_1/imagenes/candado.png"));
         iconoU.setIcon(new ImageIcon("src/Practica_1/imagenes/usuario.png"));
 
-        //listeners
+        //en donde queramos ponerlo llamamos al boton.setBorder(new Clase(radio))
+        login.setBorder(new RoundedBorder(9));
+
+
+
+
+
+        // ---- LISTENERS ----
         //boton login
         login.addActionListener(new ActionListener() {
             @Override
@@ -69,9 +77,6 @@ public class Login extends JFrame {
                     login.setBackground(new Color(240,58,71));
             }
         });
-
-
-
     }
 
     //metodo abrir el editor
@@ -83,12 +88,9 @@ public class Login extends JFrame {
 
     // ---- MAIN ----
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                Login l1 = new Login();
-            }
-        });
+        //llamamos al splashScreen para que se ejecute antes que el login
+        SplashScreen splash = new SplashScreen();
+
     }
 
 }
